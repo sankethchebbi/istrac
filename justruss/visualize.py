@@ -3,7 +3,7 @@ from typing import Literal, Any, Optional, Union
 import matplotlib.pyplot
 import numpy
 
-MatplotlibColor = 'blue'
+MatplotlibColor = Any
 """Type: New type to represent a matplotlib color, simply an alias of Any"""
 
 
