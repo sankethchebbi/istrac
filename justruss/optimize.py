@@ -2,7 +2,7 @@ from typing import Callable, Literal, Optional
 
 import numpy
 
-from trussme import Truss, Goals, read_json, Pipe, Box, Square, Bar
+from justruss import Truss, Goals, read_json, Pipe, Box, Square, Bar
 
 
 def make_x0(

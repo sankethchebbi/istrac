@@ -1,13 +1,13 @@
 """
-Trussme: A library for truss analysis and design
+justruss: A library for truss analysis and design
 
 This library includes some utilities and tools for analyzing and designing truss structures.
 
 Examples
 --------
 First, let's construct a small truss
->>> import trussme
->>> small_truss = trussme.Truss()
+>>> import justruss
+>>> small_truss = justruss.Truss()
 >>> pin = small_truss.add_pinned_joint([0.0, 0.0, 0.0])
 >>> free = small_truss.add_free_joint([2.5, 2.5, 0.0])
 >>> roller = small_truss.add_roller_joint([5.0, 0.0, 0.0])
@@ -29,7 +29,7 @@ Finally, let's analyze the truss and get the factor of safety and mass
 22.48
 """
 
-from trussme.components import (
+from justruss.components import (
     MATERIAL_LIBRARY,
     Shape,
     Material,
@@ -39,6 +39,6 @@ from trussme.components import (
     Bar,
     Square,
 )
-from trussme.truss import Truss, read_trs, read_json, Goals
-from trussme.report import report_to_str, report_to_md, print_report
-from trussme.optimize import make_truss_generator_function, make_optimization_functions
+from justruss.truss import Truss, read_trs, read_json, Goals
+from justruss.report import report_to_str, report_to_md, print_report
+from justruss.optimize import make_truss_generator_function, make_optimization_functions

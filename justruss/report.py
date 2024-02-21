@@ -7,9 +7,9 @@ import numpy
 import pandas
 import scipy
 
-import trussme.visualize
+import justruss.visualize
 
-from trussme.truss import Truss, Goals
+from justruss.truss import Truss, Goals
 
 
 def _fig_to_svg(fig: matplotlib.pyplot.Figure) -> str:
@@ -251,7 +251,7 @@ def __generate_instantiation_information(truss, with_figures: bool = True) -> st
     instantiation = "# INSTANTIATION INFORMATION\n"
 
     if with_figures:
-        instantiation += _fig_to_svg(trussme.visualize.plot_truss(truss)) + "\n"
+        instantiation += _fig_to_svg(justruss.visualize.plot_truss(truss)) + "\n"
 
     # Print joint information
     instantiation += "## JOINTS\n"
@@ -413,7 +413,7 @@ def __generate_stress_analysis(truss, goals, with_figures: bool = True) -> str:
 
     if with_figures:
         analysis += (
-            _fig_to_svg(trussme.visualize.plot_truss(truss, starting_shape="force"))
+            _fig_to_svg(justruss.visualize.plot_truss(truss, starting_shape="force"))
             + "\n"
         )
 
@@ -455,7 +455,7 @@ def __generate_stress_analysis(truss, goals, with_figures: bool = True) -> str:
     if with_figures:
         analysis += (
             _fig_to_svg(
-                trussme.visualize.plot_truss(
+                justruss.visualize.plot_truss(
                     truss, starting_shape="k", deflected_shape="m"
                 )
             )

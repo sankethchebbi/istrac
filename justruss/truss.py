@@ -6,7 +6,7 @@ import numpy
 from numpy.typing import NDArray
 import scipy
 
-from trussme.components import (
+from justruss.components import (
     Joint,
     Member,
     Material,
@@ -37,9 +37,9 @@ class Goals:
     Examples
     --------
     This is a goal container with the default values
-    >>> import trussme
+    >>> import justruss
     >>> import numpy
-    >>> goals = trussme.Goals(
+    >>> goals = justruss.Goals(
     ...    minimum_fos_buckling=1.0,
     ...    minimum_fos_yielding=1.0,
     ...    maximum_mass=numpy.inf,

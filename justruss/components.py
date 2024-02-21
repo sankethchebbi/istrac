@@ -45,8 +45,8 @@ class Shape(abc.ABC):
 
     Examples
     --------
-    >>> import trussme
-    >>> class MagicalRod(trussme.Shape):
+    >>> import justruss
+    >>> class MagicalRod(justruss.Shape):
     ...     def __init__(self):
     ...         self._params = {}
     ...
@@ -122,8 +122,8 @@ class Pipe(Shape):
 
     Examples
     --------
-    >>> import trussme
-    >>> pipe = trussme.Pipe(r=1.0, t=1.0)
+    >>> import justruss
+    >>> pipe = justruss.Pipe(r=1.0, t=1.0)
     >>> round(pipe.moi(), 3)
     0.785
     >>> round(pipe.area(), 3)
@@ -158,8 +158,8 @@ class Bar(Shape):
 
     Examples
     --------
-    >>> import trussme
-    >>> bar = trussme.Bar(r=1.0)
+    >>> import justruss
+    >>> bar = justruss.Bar(r=1.0)
     >>> round(bar.moi(), 3)
     0.785
     >>> round(bar.area(), 3)
@@ -192,8 +192,8 @@ class Square(Shape):
 
     Examples
     --------
-    >>> import trussme
-    >>> square = trussme.Square(w=1.0, h=1.0)
+    >>> import justruss
+    >>> square = justruss.Square(w=1.0, h=1.0)
     >>> round(square.moi(), 3)
     0.083
     >>> square.area()
@@ -231,8 +231,8 @@ class Box(Shape):
 
     Examples
     --------
-    >>> import trussme
-    >>> box = trussme.Box(w=1.0, h=1.0, t=0.5)
+    >>> import justruss
+    >>> box = justruss.Box(w=1.0, h=1.0, t=0.5)
     >>> round(box.moi(), 3)
     0.083
     >>> box.area()
